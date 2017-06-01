@@ -1,7 +1,9 @@
+#
 # Conditional build:
-%bcond_without	static_libs	# don't build static libraries
+%bcond_without	static_libs	# static library
 #
 Summary:	Library for epub documents
+Summary(pl.UTF-8):	Biblioteka do obsługi dokumentów epub
 Name:		libgepub
 Version:	0.4
 Release:	1
@@ -11,14 +13,14 @@ Source0:	http://ftp.gnome.org/pub/GNOME/sources/libgepub/0.4/%{name}-%{version}.
 # Source0-md5:	431a1be6408825a6a7df5eb5f2362791
 BuildRequires:	autoconf >= 2.60
 BuildRequires:	automake >= 1:1.10
-BuildRequires:	glib2-devel
+BuildRequires:	glib2-devel >= 2.0
 BuildRequires:	gnome-common
 BuildRequires:	gobject-introspection-devel >= 1.30.0
 BuildRequires:	gtk-webkit4-devel
 BuildRequires:	libarchive-devel
-BuildRequires:	libsoup-devel
+BuildRequires:	libsoup-devel >= 2.4
 BuildRequires:	libtool
-BuildRequires:	libxml2-devel
+BuildRequires:	libxml2-devel >= 2.0
 BuildRequires:	pkgconfig
 BuildRequires:	tar >= 1:1.22
 BuildRequires:	xz
@@ -28,12 +30,16 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 libgepub is a GObject based library for handling and rendering epub
 documents.
 
+%description -l pl.UTF-8
+libgepub to oparta na GObject biblioteka do obsługi i renderowania
+dokumentów epub.
+
 %package devel
 Summary:	Header files for libgepub library
 Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki libgepub
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
-Requires:	glib2-devel
+Requires:	glib2-devel >= 2.0
 Requires:	libarchive-devel
 Requires:	libxml2-devel
 
