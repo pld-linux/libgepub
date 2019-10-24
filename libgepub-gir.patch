@@ -1,0 +1,11 @@
+--- libgepub-0.6.0/libgepub/meson.build.orig	2018-03-15 08:39:19.000000000 +0100
++++ libgepub-0.6.0/libgepub/meson.build	2019-10-24 16:00:00.474890120 +0200
+@@ -65,7 +65,7 @@
+   install_dir: join_paths(get_option('libdir'), 'pkgconfig')
+ )
+ 
+-if get_option('introspection') and get_option('default_library') == 'shared'
++if get_option('introspection') and get_option('default_library') != 'static'
+   gir_incs = [
+     'GObject-2.0',
+     'libxml2-2.0',
