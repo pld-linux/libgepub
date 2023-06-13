@@ -5,21 +5,21 @@
 Summary:	Library for epub documents
 Summary(pl.UTF-8):	Biblioteka do obsługi dokumentów epub
 Name:		libgepub
-Version:	0.6.0
-Release:	3
+Version:	0.7.1
+Release:	1
 License:	LGPL v2.1+
 Group:		X11/Libraries
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/libgepub/0.6/%{name}-%{version}.tar.xz
-# Source0-md5:	77e3f2e3f57436d426eaf996675e44aa
+Source0:	https://download.gnome.org/sources/libgepub/0.7/%{name}-%{version}.tar.xz
+# Source0-md5:	24fdda446dc6991e969c5bc46f965dcc
 Patch0:		%{name}-gir.patch
 URL:		https://gitlab.gnome.org/GNOME/libgepub
 BuildRequires:	glib2-devel >= 2.0
 BuildRequires:	gobject-introspection-devel >= 1.30.0
-BuildRequires:	gtk-webkit4-devel
+BuildRequires:	gtk-webkit4.1-devel
 BuildRequires:	libarchive-devel
-BuildRequires:	libsoup-devel >= 2.4
+BuildRequires:	libsoup3-devel >= 3.0
 BuildRequires:	libxml2-devel >= 2.0
-BuildRequires:	meson >= 0.41.0
+BuildRequires:	meson >= 0.46.0
 BuildRequires:	ninja >= 1.5
 BuildRequires:	pkgconfig
 BuildRequires:	rpmbuild(macros) >= 1.736
@@ -85,17 +85,17 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc AUTHORS MAINTAINERS NEWS README TODO
-%attr(755,root,root) %{_libdir}/libgepub-0.6.so.*.*.*
-%attr(755,root,root) %ghost %{_libdir}/libgepub-0.6.so.0
-%{_libdir}/girepository-1.0/Gepub-0.6.typelib
+%attr(755,root,root) %{_libdir}/libgepub-0.7.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libgepub-0.7.so.0
+%{_libdir}/girepository-1.0/Gepub-0.7.typelib
 
 %files devel
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/libgepub-0.6.so
-%{_includedir}/libgepub-0.6
-%{_pkgconfigdir}/libgepub-0.6.pc
-%{_datadir}/gir-1.0/Gepub-0.6.gir
+%attr(755,root,root) %{_libdir}/libgepub-0.7.so
+%{_includedir}/libgepub-0.7
+%{_pkgconfigdir}/libgepub-0.7.pc
+%{_datadir}/gir-1.0/Gepub-0.7.gir
 
 %files static
 %defattr(644,root,root,755)
-%{_libdir}/libgepub-0.6.a
+%{_libdir}/libgepub-0.7.a
