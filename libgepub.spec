@@ -9,7 +9,7 @@ Version:	0.6.0
 Release:	5
 License:	LGPL v2.1+
 Group:		X11/Libraries
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/libgepub/0.6/%{name}-%{version}.tar.xz
+Source0:	https://download.gnome.org/sources/libgepub/0.6/%{name}-%{version}.tar.xz
 # Source0-md5:	77e3f2e3f57436d426eaf996675e44aa
 Patch0:		%{name}-gir.patch
 URL:		https://gitlab.gnome.org/GNOME/libgepub
